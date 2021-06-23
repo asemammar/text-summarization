@@ -37,7 +37,7 @@ def train(params):
  
 
 def test(params):
-	assert params["mode"].lower() in ["test","eval"], "change training mode to 'test' or 'eval'"
+	assert params["mode"].lower() in ["test","eval", "test_request"], "change training mode to 'test' or 'eval'"
 	assert params["beam_size"] == params["batch_size"], "Beam size must be equal to batch_size, change the params"
 
 	tf.compat.v1.logging.info("Building the model ...")
@@ -74,6 +74,12 @@ def test_and_save(params):
 				f.write("\n\nabstract:\n")
 				f.write(trial.abstract)
 			pbar.update(1)
+
+def test_and_serve(params):
+	res = []
+	gen = test(params)
+	trial = next(gen)
+	return trial.abstract
 
 def evaluate(params):
 	gen = test(params)

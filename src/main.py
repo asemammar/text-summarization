@@ -1,6 +1,6 @@
 import tensorflow as tf
 import argparse
-from train_test_eval import train, test_and_save, evaluate
+from train_test_eval import train, test_and_save, evaluate, test_and_serve
 import os
 # os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
@@ -38,15 +38,16 @@ def main():
   print(params)
 
   assert params["mode"], "mode is required. train, test or eval option"
-  assert params["mode"] in ["train", "test", "eval"], "The mode must be train , test or eval"
+  assert params["mode"] in ["train", "test", "eval", "test_request"], "The mode must be train , test or eval"
   assert os.path.exists(params["data_dir"]), "data_dir doesn't exist"
   assert os.path.isfile(params["vocab_path"]), "vocab_path doesn't exist"
-
 
   if params["mode"] == "train":
     train( params)
   elif params["mode"] == "test":
     test_and_save(params)
+  elif params["mode"] == "test_request":
+    test_and_serve(params)
   elif params["mode"] == "eval":
     evaluate(params)
   
