@@ -36,25 +36,25 @@ models = {
   "MLSUM/TR - Base": {
     "name": "MLSUM/TR - Base",
     "key": "base",
-    "data": "cnndm",
+    "data": "mlsumtr",
     "embed_size" : 128
   },
   "MLSUM/TR - Word2Vec": {
     "name": "MLSUM/TR - Word2Vec",
     "key": "w2v",
-    "data": "cnndm",
+    "data": "mlsumtr",
     "embed_size" : 300
   },
   "MLSUM/TR - GloVe": {
     "name": "MLSUM/TR - GloVe",
     "key": "glove",
-    "data": "cnndm",
+    "data": "mlsumtr",
     "embed_size" : 300
   },
   "MLSUM/TR - USE": {
     "name": "MLSUM/TR - USE",
     "key": "use",
-    "data": "cnndm",
+    "data": "mlsumtr",
     "embed_size" : 0
   }
 }
