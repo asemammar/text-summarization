@@ -19,43 +19,56 @@ models = {
     "name": "CNNDM - Word2Vec",
     "key": "w2v",
     "data": "cnndm",
-    "embed_size" : 300
+    "embed_size": 300,
+    "pt_embedding": "w2v_embedding_matrix.pk"
   },
   "CNNDM - GloVe": {
     "name": "CNNDM - GloVe",
     "key": "glove",
     "data": "cnndm",
-    "embed_size" : 300
+    "embed_size": 100,
+    "pt_embedding": "glove_embedding_matrix.pk"
   },
   "CNNDM - USE": {
     "name": "CNNDM - USE",
     "key": "use",
     "data": "cnndm",
-    "embed_size" : 0
+    "embed_size" : 512,
+    "pt_embedding": "use_embedding_matrix.pk"
+  },
+  "CNNDM - NNLM": {
+    "name": "CNNDM - NNLM",
+    "key": "nnlm",
+    "data": "cnndm",
+    "embed_size" : 128,
+    "pt_embedding": "nnlm_embedding_matrix.pk"
   },
   "MLSUM/TR - Base": {
     "name": "MLSUM/TR - Base",
-    "key": "base",
+    "key": "base-tr",
     "data": "mlsumtr",
     "embed_size" : 128
   },
   "MLSUM/TR - Word2Vec": {
     "name": "MLSUM/TR - Word2Vec",
-    "key": "w2v",
+    "key": "w2v-tr",
     "data": "mlsumtr",
-    "embed_size" : 300
+    "embed_size" : 400,
+    "pt_embedding": "w2v-tr_embedding_matrix.pk"
   },
   "MLSUM/TR - GloVe": {
     "name": "MLSUM/TR - GloVe",
-    "key": "glove",
+    "key": "glove-tr",
     "data": "mlsumtr",
-    "embed_size" : 300
+    "embed_size" : 300,
+    "pt_embedding": "glove-tr_embedding_matrix.pk"
   },
   "MLSUM/TR - USE": {
     "name": "MLSUM/TR - USE",
-    "key": "use",
+    "key": "use-tr",
     "data": "mlsumtr",
-    "embed_size" : 0
+    "embed_size" : 512,
+    "pt_embedding": "use-tr_embedding_matrix.pk"
   }
 }
 
@@ -96,6 +109,7 @@ def get_params(model):
       'embed_size': model_params["embed_size"],
       'checkpoint_dir': f'../checkpoints/{model_params["key"]}/',
       'vocab_path': f'../data/{model_params["data"]}/vocab',
+      'pt_embedding': f'../data/embeddings/{model_params["pt_embedding"]}' if model_params["pt_embedding"] else '',
     }
   )
   return params
