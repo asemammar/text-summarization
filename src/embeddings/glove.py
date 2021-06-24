@@ -2,15 +2,15 @@ import sys, pickle, numpy as np
 from batcher import Vocab
 import pickle
 
-
-glove_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/glove.6B.100d.txt'
-path_to_vocab = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/tfrecords_finished_files/vocab'
-save_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/embeddings/glove_embedding_matrix.pk'
-embed_size = 100 # params["embed_size"]
+# Download your preferred pretrained Glove Embedding. We used glove.6B.100d.
+# https://nlp.stanford.edu/projects/glove/
+glove_file = 'path/to/glove.6B.100d.txt'
+path_to_vocab = '../../data/cnndm/vocab'
+save_file = 'path/to/glove_embedding_matrix.pk'
+embed_size = 100 # in main.py change params["embed_size"] according to this embed_size
 
 vocab = Vocab(path_to_vocab, 50000)
 
-#https://stackoverflow.com/questions/37793118/load-pretrained-glove-vectors-in-python
 def load_glove_model(glove_file):
     print("Loading Glove Model")
     with open(glove_file,'r',encoding='utf8') as f:

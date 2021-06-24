@@ -3,10 +3,11 @@ from batcher import Vocab
 import pickle
 from gensim.models import KeyedVectors
 
-w2v_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/w2v_tr_model'
-path_to_vocab = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/mlsum/vocab'
-save_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/embeddings/w2v-tr_embedding_matrix.pk'
-embed_size = 400 # params["embed_size"]
+# Download the pretrained turkish w2v model from https://github.com/akoksal/Turkish-Word2Vec
+w2v_file = 'path/to/w2v_tr_model'
+path_to_vocab = '../../data/mlsumtr/vocab'
+save_file = 'path/to/w2v-tr_embedding_matrix.pk'
+embed_size = 400 # in main.py change params["embed_size"] according to this embed_size
 
 vocab = Vocab(path_to_vocab, 50000)
 

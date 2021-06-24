@@ -4,11 +4,10 @@ import pickle
 import tensorflow_hub as hub
 import tensorflow_text
 
-# https://tfhub.dev/google/universal-sentence-encoder-multilingual/3
-use_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/universal-sentence-encoder-multilingual_3'
-path_to_vocab = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/mlsum/vocab'
-save_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/embeddings/use-tr_embedding_matrix.pk'
-embed_size = 512 # params["embed_size"]
+use_file = 'https://tfhub.dev/google/universal-sentence-encoder-multilingual/3'
+path_to_vocab = '../../data/mlsumtr/vocab'
+save_file = 'path/to/use-tr_embedding_matrix.pk'
+embed_size = 512 # in main.py change params["embed_size"] according to this embed_size
 
 vocab = Vocab(path_to_vocab, 50000)
 

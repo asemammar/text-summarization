@@ -3,10 +3,12 @@ from batcher import Vocab
 import pickle
 from gensim.models import KeyedVectors
 
-w2v_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/GoogleNews-vectors-negative300.bin'
-path_to_vocab = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/tfrecords_finished_files/vocab'
-save_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/embeddings/w2v_embedding_matrix.pk'
-embed_size = 300 # params["embed_size"]
+# Download pretrained w2v GoogleNews-vectors-negative300 and uncompress it:
+# https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz
+w2v_file = 'path/to/GoogleNews-vectors-negative300.bin'
+path_to_vocab = '../../data/cnndm/vocab'
+save_file = 'path/to/w2v_embedding_matrix.pk'
+embed_size = 300 # in main.py change params["embed_size"] according to this embed_size
 
 vocab = Vocab(path_to_vocab, 50000)
 

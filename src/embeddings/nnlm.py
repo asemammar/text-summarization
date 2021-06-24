@@ -3,11 +3,10 @@ from batcher import Vocab
 import pickle
 import tensorflow_hub as hub
 
-# https://tfhub.dev/google/nnlm-en-dim128/2
-nnlm_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/nnlm-en-dim128_2'
-path_to_vocab = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/tfrecords_finished_files/vocab'
-save_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/embeddings/nnlm_embedding_matrix.pk'
-embed_size = 128 # params["embed_size"]
+nnlm_file = 'https://tfhub.dev/google/nnlm-en-dim128/2'
+path_to_vocab = '../../data/cnndm/vocab'
+save_file = 'path/to/nnlm_embedding_matrix.pk'
+embed_size = 128 # in main.py change params["embed_size"] according to this embed_size
 
 vocab = Vocab(path_to_vocab, 50000)
 

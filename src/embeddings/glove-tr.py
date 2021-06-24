@@ -4,10 +4,12 @@ import pickle
 from gensim.models import KeyedVectors
 from gensim.scripts.glove2word2vec import glove2word2vec
 
-w2v_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/glove_tr_vectors/w2v_vectors.txt'
-path_to_vocab = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/mlsum/vocab'
-save_file = 'D:/Boun/PhD/Season2(S21)/CmpE58T/Project/Data/embeddings/glove-tr_embedding_matrix.pk'
-embed_size = 300 # params["embed_size"]
+# https://github.com/inzva/Turkish-GloVe
+# Follow the instructions and create gensim word2vec file using pretrained Turkish-Glove embeddings
+w2v_file = 'path/to/w2v_vectors.txt'
+path_to_vocab = '../../data/mlsumtr/vocab'
+save_file = 'path/to/glove-tr_embedding_matrix.pk'
+embed_size = 300 # in main.py change params["embed_size"] according to this embed_size
 
 vocab = Vocab(path_to_vocab, 50000)
 
