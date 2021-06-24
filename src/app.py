@@ -109,7 +109,7 @@ def get_params(model):
       'embed_size': model_params["embed_size"],
       'checkpoint_dir': f'../checkpoints/{model_params["key"]}/',
       'vocab_path': f'../data/{model_params["data"]}/vocab',
-      'pt_embedding': f'../data/embeddings/{model_params["pt_embedding"]}' if model_params["pt_embedding"] else '',
+      'pt_embedding': f'../data/embeddings/{model_params["pt_embedding"]}' if "pt_embedding" in model_params else '',
     }
   )
   return params
