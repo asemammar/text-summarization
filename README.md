@@ -1,15 +1,16 @@
 # Pointer-Generator Networks with Different Word Embeddings forAbstractive Summarization
 
-**Burak Suyunu, Muhammed Emin Güre**
-Department of Computer Engineering, Boğaziçi University
+**Burak Suyunu, Muhammed Emin Güre**  
+Department of Computer Engineering, Boğaziçi University  
 CmpE 58T - Adv. Natural Language Processing (Spring 2021)
 
 -----
 
 ### Requirements
-* python > 3.6
+* python >= 3.6
 
-Package dependencies are in `requirements.txt` file. To install all run `pip install -r requirements.txt`.
+Package dependencies are in `requirements.txt` file.  
+To install all run `pip install -r requirements.txt`.
 
 ### Turkish Dataset Preparation
 ```bash
