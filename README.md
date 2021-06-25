@@ -1,4 +1,4 @@
-# Pointer-Generator Networks with Different Word Embeddings forAbstractive Summarization
+# Pointer-Generator Networks with Different Word Embeddings for Abstractive Summarization
 
 **Burak Suyunu, Muhammed Emin Güre**  
 Department of Computer Engineering, Boğaziçi University  
