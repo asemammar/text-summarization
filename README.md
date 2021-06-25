@@ -13,7 +13,7 @@ CmpE 58T - Adv. Natural Language Processing (Spring 2021)
 Package dependencies are in `requirements.txt` file.  
 To install all run `pip install -r requirements.txt`.
 
-## Turkish Dataset
+## Turkish Dataset (MLSUM)
 
 ### Option 1 - Prepare Data Yourself
 ```bash
@@ -52,7 +52,7 @@ To generate the embedding matrices yourself:
 You can directly download the preprocessed Embedding Matirces with this link: https://drive.google.com/drive/folders/18a-keUl5GAAQmZf-i3lUwYv2z8YPh888?usp=sharing
 
 
-## Training Model
+## Training Models
 
 ### Option 1 - Train the Model Yourself
 
@@ -80,7 +80,7 @@ For Turkish Models with Embedding:
 python src/main.py --mode=train --data_dir=/path/to/mlsum/train.tfrecords --vocab_path=/path/to/mlsum/vocab --checkpoint_dir=/path/to/Checkpoints/embedding-name --pt_embedding=/path/to/embeddings/embedding-name_embedding_matrix.pk --embed_size=embedding-dimension
 ```
 
-### Option 2 - Download Pretrained Model
+### Option 2 - Download Pretrained Models
 
 We have trained each model for 5000 iterations and saved as checkpoints. You can directly download the pretrained models with this link: https://drive.google.com/drive/folders/1-aIVMb4jCJF515KcSpH2uLSfV88ZqxlK?usp=sharing
 
