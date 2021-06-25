@@ -87,6 +87,26 @@ We have trained each model for 5000 iterations and saved as checkpoints. You can
 Give the pretrained model directory as --checkpoint_dir parameter to the model to continue training or evaluate/test with it.
 
 
+## Testing/Evaluating Models
+
+While testing and evaluating results, batch size and beam size must be equal.
+
+When mode is set to eval, the code outputs the ROUGE score according to the files found in --data_dir. Default number to evaluate ROUGE score is 5.
+
+When mode is set to test, the code outputs some translation examples to directory given as parameter to test_save_dir.
+
+For English Models with Embedding:
+
+```bash
+python src/main.py --mode=eval --data_dir=/path/to/tfrecords_finished_files/chunked_val --vocab_path=/path/to/tfrecords_finished_files/vocab --checkpoint_dir=/path/to/Checkpoints/embedding-name --pt_embedding=/path/to/embeddings/embedding-name_embedding_matrix.pk --embed_size=embedding-dimension --batch_size=4 --beam_size=4
+```
+
+For Turkish Models with Embedding:
+
+```bash
+python src/main.py --mode=eval --data_dir=/path/to/mlsum/val.tfrecords --vocab_path=/path/to/mlsum/vocab --checkpoint_dir=/path/to/Checkpoints/embedding-name --pt_embedding=/path/to/embeddings/embedding-name_embedding_matrix.pk --embed_size=embedding-dimension --batch_size=4 --beam_size=4
+```
+
 ## Demo
 ```bash
 cd src
