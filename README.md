@@ -39,7 +39,7 @@ You can directly download the preprocessed dataset using with this link: https:/
 
 To be able to run the model with pretrained embeddings, you need to generate the embedding matrix of the corresponding pre-trained word embedding method. 
 
-### Option 1 - Prepare Data Yourself
+### Option 1 - Prepare Embedding Matrices Yourself
 To generate the embedding matrices yourself:
 
 1. Go to <code>src/embeddings/</code>
@@ -48,13 +48,13 @@ To generate the embedding matrices yourself:
   3.1. For <code>nnlm.py | use.py | use-tr.py</code>, you don't need to make any adjustments.
 4. Run the code <code>python embedding_name.py</code> (<code>python glove.py</code> for English GloVe)
 
-### Option 2 - Download Preprocessed Data
-You can directly download the preprocessed Embedding Matirces with this link: https://drive.google.com/drive/folders/18a-keUl5GAAQmZf-i3lUwYv2z8YPh888?usp=sharing
+### Option 2 - Download Embedding Matrices
+You can directly download the Embedding Matirces with this link: https://drive.google.com/drive/folders/18a-keUl5GAAQmZf-i3lUwYv2z8YPh888?usp=sharing
 
 
 ## Training Models
 
-### Option 1 - Train the Model Yourself
+### Option 1 - Train the Models Yourself
 
 For English Models:
 
